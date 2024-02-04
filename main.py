@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Read the CSV file into a DataFrame
-df = pd.read_csv('your_csv_file.csv')
+df = pd.read_csv('cs.csv')
 
 # Extract the 'Name' column from the DataFrame
 names = df['Name'].tolist()
