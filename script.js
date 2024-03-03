@@ -1,14 +1,6 @@
 function generateRandomEmojis() {
-  // Define an array of emojis for better user experience
-  const emojis = [
-    "😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊", "😋", "😎", "😍", "😘",
-    "😇", "🥰", "😛", "😜", "🤪", "😝", "🤑", "🤗", "🤩", "🤭", "🤫", "🤔", "🤐", "🤨",
-    "😐", "😑", "😶", "😏", "😒", "🙄", "😬", "😳", "🤥", "😌", "😔", "😪", "🤤", "😴",
-    "😎", "🤓", "🧐", "😕", "😟", "🙁", "☹️", "😮", "😯", "😲", "😳", "🥺", "😦", "😧",
-    "😨", "😰", "😥", "😢", "😭", "😱", "😖", "😣", "😞", "😓", "😩", "😫", "🥱", "😤",
-    "😡", "😠", "🤬", "😈", "👿", "💀", "☠️", "💩", "🤡", "👹", "👺", "👻", "👽", "👾",
-    "🤖", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾", "🙈", "🙉", "🙊", "💋"
-  ];
+  // Define an array of 14 unique emojis
+  const emojis = ["😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊", "😋", "😎", "😍", "😘", "🥰", "😻", "🙈", "🙉", "🙊", "💩", "🐶", "🐱", "🐭", "🐰", "🐼", "🐻", "🐨"];
 
   // Shuffle the array to randomize the emojis
   for (let i = emojis.length - 1; i > 0; i--) {
@@ -16,18 +8,15 @@ function generateRandomEmojis() {
     [emojis[i], emojis[j]] = [emojis[j], emojis[i]];
   }
 
-  // Select the first 28 emojis to pair with the cards
-  const emojiPairs = emojis.slice(0, 28);
-
-  // Duplicate the emojiPairs array to create pairs
-  const cardEmojis = emojiPairs.concat(emojiPairs);
+  // Duplicate the emojis array to create pairs
+  const emojiPairs = emojis.concat(emojis);
 
   // Get all the card-back elements
   const cardBacks = document.querySelectorAll('.card-face.card-back');
 
   // Loop through each card back and assign a random emoji pair
   cardBacks.forEach((cardBack, index) => {
-    cardBack.textContent = cardEmojis[index];
+    cardBack.textContent = emojiPairs[index];
   });
 }
 
