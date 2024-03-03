@@ -25,16 +25,16 @@ body {
 }
 
 .card {
-    width: calc(100% - 4px); /* Adjusted width to account for border width */
-    height:22vh ;
-    padding-top: 4px; /* Adjusted padding-top to account for border width */
+    width: calc(100% - -3vmax);
+    height: 19vh;
+    padding-top: 4px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.8s;
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center content horizontally and vertically */
+    align-items: center;
 }
 .card.flipped {
     transform: rotateY(180deg);
