@@ -27,7 +27,6 @@ body {
 .card {
     width: calc(100% - 4px);
     height: 17vh;
-    padding-top: 4px;
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.7s;
@@ -77,13 +76,13 @@ body {
 
 @media screen and (max-width: 480px)
 {.card {
-        height: 15vh;
+        height: 10vh;
 }
  
  .grid-container {
     grid-gap: 1.5vw;
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     .card-face {
-        font-size: 5vw;
+        font-size: 6vw;
     }
 }}
