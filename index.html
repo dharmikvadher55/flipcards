@@ -133,41 +133,5 @@
             card.classList.toggle('flipped');
         }
     </script>
-
-   <script>
-        // Array containing 14 pairs of emojis
-        const emojis = ['😀', '😃', '😄', '😁', '😆', '😅', '😂', '🤣', '😊', '😇', '🙂', '🙃', '😉', '😌'];
-
-        // Shuffle function to randomize the order of emojis
-        function shuffle(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        // Shuffle the emojis array
-        shuffle(emojis);
-
-        // Select all cards
-        const cards = document.querySelectorAll('.card');
-
-        // Loop through the cards and assign emojis from the shuffled array
-        let emojiIndex = 0;
-        cards.forEach(card => {
-            const frontFace = card.querySelector('.card-front');
-            const backFace = card.querySelector('.card-back');
-
-            // Assign emojis to the back of the card
-            backFace.textContent = emojis[emojiIndex];
-            emojiIndex++;
-
-            // Event listener for flipping the card
-            card.addEventListener('click', function() {
-                card.classList.toggle('flipped');
-            });
-        });
-    </script>
 </body>
 </html>
