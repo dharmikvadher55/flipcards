@@ -2,8 +2,8 @@
 function flipCard(card) {
   const allCards = document.querySelectorAll('.card');
   
-  // Check if the clicked card is already flipped
-  if (!card.classList.contains('flipped')) {
+  // Check if the clicked card is already flipped or matched
+  if (!card.classList.contains('flipped') && !card.classList.contains('matched')) {
     // Flip the clicked card
     card.classList.add('flipped');
     
@@ -14,8 +14,10 @@ function flipCard(card) {
         const frontFacedEmoji = frontFacedCard.querySelector('.card-back').textContent;
         const clickedEmoji = card.querySelector('.card-back').textContent;
         
-        // If both cards have the same emoji, keep both front-faced
+        // If both cards have the same emoji, keep both front-faced and mark them as matched
         if (frontFacedEmoji === clickedEmoji) {
+          frontFacedCard.classList.add('matched');
+          card.classList.add('matched');
           return;
         } else {
           // If not, flip back all other cards
@@ -23,8 +25,5 @@ function flipCard(card) {
         }
       }
     });
-  } else {
-    // If the clicked card is already flipped, flip it back
-    card.classList.remove('flipped');
   }
 }
