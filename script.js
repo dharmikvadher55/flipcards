@@ -1,24 +1,39 @@
-function generateRandomEmojis() {
-  // Define an array of 14 unique emojis
-  const emojis = ["😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊", "😋", "😎", "😍", "😘", "🥰", "😻", "🙈", "🙉", "🙊", "💩", "🐶", "🐱", "🐭", "🐰", "🐼", "🐻", "🐨"];
-
-  // Shuffle the array to randomize the emojis
-  for (let i = emojis.length - 1; i > 0; i--) {
+// Function to shuffle an array
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [emojis[i], emojis[j]] = [emojis[j], emojis[i]];
+    [array[i], array[j]] = [array[j], array[i]];
   }
+  return array;
+}
 
-  // Duplicate the emojis array to create pairs
-  const emojiPairs = emojis.concat(emojis);
+// Array of diverse emojis (you can add more)
+const emojis = ["😀", "😁", "😂", "🤣", "😃", "😄", "😅", "😆", "😉", "😊", "😋", "😎", "😍", "😘", "😗", "😙", "😚", "☺️", "🙂", "🤗", "🤔", "😐", "😑", "😶", "🙄", "😏", "😣", "😥", "😮", "😯", "😪", "😫", "😴", "😌", "😛", "😜", "😝", "🤤", "😒", "😓", "😔", "😕", "🙃", "🤑", "😲", "☹️", "🙁", "😖", "😞", "😟", "😤", "😢", "😭", "😦", "😧", "😨", "😩", "😬", "😰", "😱", "😳", "😵", "😡", "😠", "😷", "🤒", "🤕", "🤢", "🤧", "😇", "🤠", "🤡", "🤥", "🤓", "😈", "👿", "👹", "👺", "💀", "☠️", "👻", "👽", "👾", "🤖", "💩", "😺", "😸", "😹", "😻", "😼", "😽", "🙀", "😿", "😾"];
 
-  // Get all the card-back elements
-  const cardBacks = document.querySelectorAll('.card-face.card-back');
-
-  // Loop through each card back and assign a random emoji pair
+// Function to assign emojis to cards
+function assignEmojisToCards() {
+  // Select all card-back elements
+  const cardBacks = document.querySelectorAll('.card-back');
+  
+  // Shuffle the array of emojis
+  const shuffledEmojis = shuffleArray(emojis);
+  
+  // Select 14 unique emojis for pairing
+  const selectedEmojis = shuffledEmojis.slice(0, 14);
+  
+  // Duplicate each emoji to create pairs
+  const emojiPairs = [...selectedEmojis, ...selectedEmojis];
+  
+  // Shuffle the pairs
+  const shuffledPairs = shuffleArray(emojiPairs);
+  
+  // Assign each pair of emojis to a card
   cardBacks.forEach((cardBack, index) => {
-    cardBack.textContent = emojiPairs[index];
+    cardBack.textContent = shuffledPairs[index];
   });
 }
 
-// Call the function to generate random emojis when the page loads
-window.onload = generateRandomEmojis;
+// Call the function on page load
+window.onload = function() {
+  assignEmojisToCards();
+};
