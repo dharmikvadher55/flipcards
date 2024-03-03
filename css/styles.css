@@ -73,7 +73,11 @@ body {
 }
 
 @media screen and (max-width: 480px)
-{.grid-container {
+{.card {
+        height: 15vh;
+}
+ 
+ .grid-container {
     grid-gap: 1.5vw;
     grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     .card-face {
