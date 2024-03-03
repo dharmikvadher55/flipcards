@@ -132,22 +132,6 @@
         function flipCard(card) {
             card.classList.toggle('flipped');
         }
-
- function generateRandomEmojis() {
-            const emojis = ['😀', '😎', '😂', '😊', '😍', '🤩', '😜', '🥳', '😇', '🤠', '😸', '🙌', '🎉', '🌟'];
-            let pairs = emojis.concat(emojis); // Duplicate emojis to create pairs
-            pairs = pairs.sort(() => Math.random() - 0.5); // Shuffle the array
-
-            const cards = document.querySelectorAll('.card');
-
-            cards.forEach((card, index) => {
-                const backFace = card.querySelector('.card-back');
-                backFace.textContent = pairs[index];
-            });
-        }
-
-        // Call the function to generate random emojis when the page loads
-        window.onload = generateRandomEmojis;
     </script>
 </body>
 </html>
