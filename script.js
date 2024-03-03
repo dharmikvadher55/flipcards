@@ -1,4 +1,7 @@
 // Function to shuffle an array
+   function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
 function shuffleArray(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -39,6 +42,3 @@ window.onload = function() {
 };
 
 
-   function flipCard(card) {
-            card.classList.toggle('flipped');
-        }
