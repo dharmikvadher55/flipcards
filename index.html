@@ -127,7 +127,50 @@
       </div>
         <!-- Add more cards as needed -->
     </div>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Array of emojis
+    const emojis = [
+        '😀', '😁', '😂', '🤣', '😃', '😄', '😅', '😆', '😉', '😊', '😋', '😎', '😍', '😘',
+        '😗', '😙', '😚', '🙂', '🤗', '🤩', '🤔', '🤨', '😐', '😑', '😶', '🙄', '😏', '😣',
+        '😥', '😮', '🤐', '😯', '😪', '😫', '😴', '😌', '😛', '😜', '😝', '🤤', '😒', '😓',
+        '😔', '😕', '🙃', '🤑', '😲', '🙁', '😖', '😞', '😟', '😤', '😢', '😭', '😦', '😧',
+        '😨', '😩', '🤯', '😬', '😰', '😱', '😳', '🤪', '😵', '😡', '😠', '🤬', '😷', '🤒',
+        '🤕', '🤢', '🤮', '🤧', '😇', '🤠', '🤡', '🤥', '🤫', '🤭', '🧐', '🤓', '😈', '👿'
+    ];
 
+    // Function to generate random pairs of emojis
+    function generateRandomPairs() {
+        const randomEmojis = [];
+        while (randomEmojis.length < 14) {
+            const randomIndex = Math.floor(Math.random() * emojis.length);
+            const randomEmoji = emojis[randomIndex];
+            // Add the same emoji twice to form a pair
+            randomEmojis.push(randomEmoji, randomEmoji);
+        }
+        return randomEmojis;
+    }
+
+    // Function to change text of card backs to random emoji pairs
+    function changeCardText() {
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            const backFace = card.querySelector('.card-back');
+            const randomPairs = generateRandomPairs();
+            backFace.textContent = '';
+            randomPairs.forEach(emoji => {
+                const emojiSpan = document.createElement('span');
+                emojiSpan.textContent = emoji;
+                backFace.appendChild(emojiSpan);
+            });
+        });
+    }
+
+    // Call the function to change card text
+    changeCardText();
+});
+
+</script>
     <script>
         function flipCard(card) {
             card.classList.toggle('flipped');
