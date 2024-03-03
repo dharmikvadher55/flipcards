@@ -25,7 +25,7 @@ function flipCard(card) {
         previousCard.classList.remove('flipped');
         card.classList.remove('flipped');
         previousCard = null;
-      }, 400); // Adjust the delay as needed
+      }, 550); // Adjust the delay as needed
     }
   } else {
     // If there's no previously flipped card, set the current card as the previously flipped card
