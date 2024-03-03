@@ -69,6 +69,9 @@ body {
 @media screen and (max-width: 768px) {
     .card-face {
         font-size: 4vw;
+        .card {
+        height: 15vh;
+}
     }
 }
 
