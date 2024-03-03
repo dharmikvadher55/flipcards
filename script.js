@@ -37,3 +37,8 @@ function assignEmojisToCards() {
 window.onload = function() {
   assignEmojisToCards();
 };
+
+
+   function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
