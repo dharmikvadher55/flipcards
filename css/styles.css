@@ -18,8 +18,8 @@ body {
     grid-gap: 2vw;
     justify-items: center;
     align-items: center;
-    width: 90vw;
-    max-width: 1140px;
+    width: 100vw;
+    max-width: 1240px;
     padding: 2vh;
     border: 2px solid #ccc;
 }
