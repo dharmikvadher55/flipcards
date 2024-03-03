@@ -12,10 +12,13 @@ body {
     padding: 2vw;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: stretch;
     min-height: 100vh;
     background-color: #f0f0f0;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
 }
 
 .grid-container {
@@ -23,9 +26,9 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 2vw;
     justify-items: center;
-    align-items: center; /* Center cards vertically */
+    align-items: center;
     width: 90vw;
-    max-width: 800px;
+    max-width: 1140px;
     padding: 2vh;
     border: 2px solid #ccc;
 }
@@ -77,15 +80,15 @@ body {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .grid-container {
-        grid-gap: 1.5vw; /* Adjusted grid gap */
-    }
-
+@media screen and (max-width: 480px)
+{.grid-container {
+    grid-gap: 1.5vw;
+   grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
     .card-face {
-        font-size: 5vw;
+        font-size: 2vh;
     }
-}
+}}
+
 
 </style>
 
@@ -140,6 +143,42 @@ body {
             <div class="card-face card-front">Front</div>
             <div class="card-face card-back">Back</div>
         </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-face card-front">Front</div>
+          <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front">Front</div>
+        <div class="card-face card-back">Back</div>
+    </div>
+    <div class="card" onclick="flipCard(this)">
+      <div class="card-face card-front">Front</div>
+      <div class="card-face card-back">Back</div>
+  </div>
+  <div class="card" onclick="flipCard(this)">
+    <div class="card-face card-front">Front</div>
+    <div class="card-face card-back">Back</div>
+</div>
+<div class="card" onclick="flipCard(this)">
+  <div class="card-face card-front">Front</div>
+  <div class="card-face card-back">Back</div>
+</div>
+<div class="card" onclick="flipCard(this)">
+  <div class="card-face card-front">Front</div>
+  <div class="card-face card-back">Back</div>
+</div>
+<div class="card" onclick="flipCard(this)">
+  <div class="card-face card-front">Front</div>
+  <div class="card-face card-back">Back</div>
+</div>
+<div class="card" onclick="flipCard(this)">
+  <div class="card-face card-front">Front</div>
+  <div class="card-face card-back">Back</div>
+</div>
+<div class="card" onclick="flipCard(this)">
+  <div class="card-face card-front">Front</div>
+  <div class="card-face card-back">Back</div>
+</div>
 
         <!-- Add more cards as needed -->
     </div>
