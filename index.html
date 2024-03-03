@@ -20,6 +20,7 @@ body {
     flex-direction: column-reverse;
     align-content: center;
 }
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -30,8 +31,8 @@ body {
     max-width: 1140px;
     padding: 2vh;
     border: 2px solid #ccc;
-    height: 100vmin;
 }
+
 .card {
     width: calc(100% - 4px); /* Adjusted width to account for border width */
     height:22vh ;
@@ -82,9 +83,9 @@ body {
 @media screen and (max-width: 480px)
 {.grid-container {
     grid-gap: 1.5vw;
-   grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     .card-face {
-        font-size: 2vh;
+        font-size: 5vw;
     }
 }}
 
