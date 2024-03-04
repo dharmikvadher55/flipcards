@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0;
-    overflow: visible; /* Prevent scrolling */
+    overflow:scroll; /* Prevent scrolling */
 }
 
 /* Grid container styles */
