@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KW762DYN1X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KW762DYN1X');
+</script>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipping Cards in Grid Layout</title>
+
+<link rel="stylesheet" href="css/styles.css">
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 400px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.content {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .modal-content {
+    margin: 10% auto;
+  }
+}
+
+    
+</style>
+
+    <script src="timer.js"></script>
+</head>
+<body>
+    <div class="grid-container">
+       <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-face card-front"></div>
+        <div class="card-face card-back">Back</div>
+      </div>
+    
+    
+    
+    
+        <!-- Add more cards as needed -->
+        
+        
+        
+        
+    <div id="timer">00:00.000</div>
+    </div>
+    
+    <div class="modal" id="myModal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <p>Match all cards accordingly 🎉</p>
+      <button id="btnCloseModal">start Game </button>
+    </div>
+  </div>
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById('myModal');
+  var btnClose = document.getElementById('btnCloseModal');
+  var spanClose = document.getElementById('closeModal');
+
+  spanClose.onclick = function () {
+    modal.style.display = 'none';
+  }
+
+  btnClose.onclick = function () {
+    modal.style.display = 'none';
+    startTimer();
+    
+  }
+
+ window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    } 
+  }
+
+  modal.style.display = 'block';
+});
+
+    </script>
+    
+    <script src="flip.js"></script>
+
+</body>
+</html>

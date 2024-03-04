@@ -1,0 +1,93 @@
+
+
+body { 
+    margin: 0;
+    padding: 2vw;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 2vw;
+    justify-items: center;
+    align-items: center;
+    width: 100vw;
+    max-width: 1240px;
+    padding: 2vh;
+    border: 2px solid #ccc;
+}
+
+.card {
+    width: calc(100% - 4px);
+    height: 14vh;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    font-weight: bold;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-front {
+    background-color: #3498db;
+}
+
+.card-back {
+    background-color: #e74c3c;
+    transform: rotateY(180deg);
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .card-face {
+        font-size: 4vw;
+        .card {
+        height: 15vh;
+}
+    }
+}
+
+@media screen and (max-width: 480px)
+{.card {
+        height: 10vh;
+}
+ 
+ .grid-container {
+    grid-gap: 1.5vw;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    .card-face {
+        font-size: 6vw;
+    }
+}}
+
+
+
