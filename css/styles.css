@@ -21,7 +21,7 @@ body {
 .grid-container {
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(156px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
     gap: 2vh 2vw;
     max-width: 1240px;
     padding: 2vh 2vw;
@@ -86,7 +86,9 @@ body {
 
 @media screen and (max-width: 480px) {
     .card {
-        height: 30vh;
+        
+    height: 33vh;
+    width: 22vw;
     }
     .grid-container {
         grid-gap: 1.5vw;
