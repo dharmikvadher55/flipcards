@@ -1,3 +1,26 @@
+document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById('myModal');
+  var btnClose = document.getElementById('btnCloseModal');
+  var spanClose = document.getElementById('closeModal');
+
+  spanClose.onclick = function () {
+    modal.style.display = 'none';
+  }
+
+  btnClose.onclick = function () {
+    modal.style.display = 'none';
+    startTimer();
+    
+  }
+
+ window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    } 
+  }
+
+  modal.style.display = 'block';
+});
 // Variable to store the previously flipped card
 let previousCard = null;
 
