@@ -3,9 +3,9 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    grid-gap: 2vw;
     justify-items: center;
     align-items: center;
+    height:100svh;
     width: 100%;
     max-width: 1240px;
     padding: 2vh 2vw;
