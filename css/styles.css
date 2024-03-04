@@ -79,13 +79,13 @@ body {
         font-size: 4vw;
     }
     .card {
-        height: 15vh;
+        height: 25vh;
     }
 }
 
 @media screen and (max-width: 480px) {
     .card {
-        height: 10vh;
+        height: 20vh;
     }
     .grid-container {
         grid-gap: 1.5vw;
